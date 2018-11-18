@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://ws.webservice.dgti.hblt/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.webservice.dgti.hblt/">
+
+<xs:element name="crearPais" type="tns:crearPais" />
+
+<xs:element name="crearPaisResponse" type="tns:crearPaisResponse" />
+
+<xs:element name="listarPais" type="tns:listarPais" />
+
+<xs:element name="listarPaisResponse" type="tns:listarPaisResponse" />
+
+<xs:complexType name="crearPais">
+<xs:sequence>
+<xs:element name="nomPais" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearPaisResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarPais">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarPaisResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pais" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pais">
+<xs:sequence>
+<xs:element name="idPais" type="xs:int" />
+<xs:element name="nombrePais" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
